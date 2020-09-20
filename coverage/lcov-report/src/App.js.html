@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/App.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">src</a> App.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.3% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>84/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.82% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>28/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.3% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>84/92</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-yes">60x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">124x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57x</span>
+<span class="cline-any cline-yes">57x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+import React, { Component } from 'react'
+import Betting from '../build/contracts/Betting.json'
+import getWeb3 from './utils/getWeb3'
+import BigNumber from '../node_modules/bignumber.js/bignumber.js'
+import * as football from './football.js'
+import Web3 from 'web3'
+&nbsp;
+//import './css/oswald.css'
+//import './css/open-sans.css'
+//import './css/pure-min.css'
+//import './App.css'
+&nbsp;
+&nbsp;
+var log = true
+&nbsp;
+&nbsp;
+export class Bet {
+    constructor(id, proposerStake, accepterStake, belongsTo, acceptedBy) {
+	this.id = id
+	this.proposerStake = proposerStake
+	this.accepterStake = accepterStake
+	this.odds = (proposerStake/accepterStake).toFixed(2)
+	this.belongsTo = belongsTo
+	this.acceptedBy = acceptedBy
+    }
+&nbsp;
+    setId(id) {this.id = id}
+    setProposerStake(proposerStake) {this.proposerStake = proposerStake}
+    setAcceptorStake(accepterStake) {this.accepterStake = accepterStake}
+}
+&nbsp;
+class Button extends Component {
+    render() {
+	return (
+	    &lt;button style={this.props.style} onClick={this.props.callback}&gt;
+	    {this.props.text}
+	    &lt;/button&gt;
+	)
+    }
+}
+&nbsp;
+export class BetDescr extends Component {
+    render() {
+	return (
+		&lt;p style={this.props.style}&gt; Bet with id:{this.props.bet.id.toNumber()} with stakes {this.props.bet.proposerStake} for and {this.props.bet.accepterStake} against with odds {this.props.bet.odds}:1 &lt;/p&gt;
+	)
+    }
+}
+&nbsp;
+class BetView extends Component {
+    render() {
+	var style = { display:'inline-block' };
+	let bet = &lt;BetDescr bet={this.props.bet} style={style}/&gt;
+&nbsp;
+	    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.actionTxt === null) {
+<span class="cstat-no" title="statement not covered" >		return( {bet} )</span>
+	    }
+	else {
+	    
+	    return(
+		    &lt;div &gt;
+		    {bet}
+		
+		    &lt;Button style={style} callback={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.action(this.props.bet)}</span>
+		text={this.props.actionTxt} key={this.props.id} /&gt;
+		    
+		&lt;/div&gt;
+	    );
+	}
+    }
+}
+&nbsp;
+class BetList extends Component {
+    render() {
+	return(
+	    &lt;div&gt;
+		&lt;h2&gt;{this.props.listHeader}&lt;/h2&gt;
+	    {this.props.bets.map( function(bet) {
+		return &lt;BetView bet={bet} key={bet.id}
+		id={bet.id} action={this.props.action} actionTxt={this.props.actionTxt}/&gt;
+	    }.bind(this))}
+	    &lt;/div&gt;
+	);
+    }
+}
+&nbsp;
+class SearchField extends Component {
+<span class="fstat-no" title="function not covered" >    re</span>nder() { <span class="cstat-no" title="statement not covered" >return ( &lt;p&gt;This is a search field&lt;/p&gt; ); </span>}
+}
+&nbsp;
+export class BetCreator extends Component {
+    constructor(props) {
+	super(props)
+	this.state = {
+	    proposerStake:0, accepterStake:0,
+	    proposerOdds:1, accepterOdds:1
+	}
+    }
+&nbsp;
+&nbsp;
+    setStake(proposer, stake) {
+	var odds
+	if (stake &amp;&amp; proposer === true) {
+	    odds = this.getOdds(parseInt(stake), this.state.accepterStake)
+	    this.setState({proposerStake:parseFloat(stake), accepterOdds:odds[0], proposerOdds:odds[1]})
+	}
+	else <span class="missing-if-branch" title="else path not taken" >E</span>if (stake){
+	    odds = this.getOdds(this.state.proposerStake, parseInt(stake))
+	    this.setState({accepterStake:parseFloat(stake), accepterOdds:odds[0], proposerOdds:odds[1]})
+	}
+&nbsp;
+    }
+&nbsp;
+    getOdds(stake1, stake2) {
+	var ratio = stake1 / stake2
+	<span class="missing-if-branch" title="else path not taken" >E</span>if (ratio &gt; 1) {
+	    return [1, ratio.toFixed(2)]
+	}
+	else {
+	    //console.log(1/ratio)
+<span class="cstat-no" title="statement not covered" >	    return [(1/ratio).toFixed(2), 1]</span>
+	}
+    }
+    
+    render() {
+	return(
+	    &lt;div&gt;
+		&lt;h2&gt;New Bet&lt;/h2&gt;
+		&lt;p&gt; Your Stake: {this.state.proposerStake}&lt;/p&gt;
+		&lt;input placeholder="Your stake (ether)" onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >this.setStake(true, e.target.value)}</span>&gt;&lt;/input&gt;
+		&lt;p&gt; Rival Stake: {this.state.accepterStake}&lt;/p&gt;
+		&lt;input placeholder="Rival stake (ether)" onChange={<span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >this.setStake(false, e.target.value)}</span>&gt;&lt;/input&gt;
+		&lt;p&gt; Your odds: {this.state.accepterOdds}:{this.state.proposerOdds}&lt;/p&gt;
+		&lt;button onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.createBet(this.state.proposerStake, this.state.accepterStake)}</span>&gt;Propose new bet&lt;/button&gt;
+	    &lt;/div&gt;
+	);
+    }
+}
+&nbsp;
+&nbsp;
+export class App extends Component {
+    constructor(props) {
+	super(props)
+&nbsp;
+	this.state = {
+	    storageValue: 0,
+	    web3: null,
+	    nonUserBets: [],
+	    userBets: [],
+	    userAcceptedBets: []
+	}
+    }
+&nbsp;
+    async componentWillMount() {
+	// Get network provider and web3 instance.
+	// See utils/getWeb3 for more info.
+	/*
+	if (this.useWeb3 === false) {
+	    fakeContract = new SmartContract()
+	    var provider = new Web3.providers.HttpProvider('http://127.0.0.1:9545')
+	    var web3 = new Web3(provider)
+	    this.setState({
+		web3: web3
+	    })
+	}
+	*/
+	getWeb3
+	    .then( results =&gt; {
+		this.setState({
+		    web3: results.web3
+		})
+	    })
+	    .catch(<span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >		console.log('Error finding web3 or loading smart contract')</span>
+	    }).then( (result) =&gt; {
+		// Instantiate contract once web3 provided.
+		console.log("getting contract")
+		return this.getContract()
+	    }).then( (result) =&gt; {
+		// Start watching for bet changes
+		var getBets = function() {
+		    console.log("bet change event triggered")
+		    this.getAllBets()
+		}.bind(this)
+		this.event = this.bettingContractInst.BetChange()
+		return this.event.watch(getBets)
+	    }).then( (result) =&gt; {
+		// Create a function that regularly checks for changes to account
+		this.currAccount = this.state.web3.eth.accounts[0]
+		this.getCurrAccount = function() {
+		    if (this.state.web3.eth.accounts[0] !== this.currAccount) {
+			this.currAccount = this.state.web3.eth.accounts[0];
+			this.getAllBets()
+		    }
+		}.bind(this)
+		setInterval(this.getCurrAccount, 100)
+		return this.getAllBets()
+	    })
+    }
+    async getContract() {
+	console.log("getting contract")
+	const contract = require('truffle-contract')
+	this.bettingContract = contract(Betting)
+	this.bettingContract.setProvider(this.state.web3.currentProvider)
+	this.bettingContractInst = await this.bettingContract.deployed()
+    }
+&nbsp;
+&nbsp;
+    async addNewBet(proposerStake, accepterStake) {
+	console.log("adding bet")
+	var fixture = await football.findFixtureByID(159030)
+	//var fixture2 = '{"fixture":{"id":159064,"competitionId":445,"date":"2018-02-10T12:30:00Z","status":"TIMED","matchday":27,"homeTeamName":"Tottenham Hotspur FC","homeTeamId":73,"awayTeamName":"Arsenal FC","awayTeamId":57,"result":{"goalsHomeTeam":null,"goalsAwayTeam":null},"odds":null}}'
+	//console.log(fixture)
+	//console.log("got fixture", this)
+	this.bettingContractInst.proposeBet(
+	    fixture,this.state.web3.toWei(accepterStake, "ether"),2,1,
+	    {from:this.currAccount,
+	     value: this.state.web3.toWei(proposerStake, "ether"),
+	     gas: 4712388, gasPrice: 100000000000})
+    }
+&nbsp;
+    
+    async getAllBets() {
+	var betIds = await this.bettingContractInst.getBets()
+	//console.log(betIds)
+	var nonUserBets = []
+	var userBets = []
+	var userAcceptedBets = []
+	var bet
+	//console.log(betIds.length)
+	for (var i = 0; i &lt; betIds.length; i++) {
+	    //console.log(i)
+	    bet = await this.bettingContractInst.bets(betIds[i])//.getBet(id)
+	    bet = this.convertBet(bet)
+	    //console.log(bet)
+	    if (bet.deleted === false) {
+		if (bet.accepted=== false ) {
+		    if (bet.belongsTo === this.currAccount) {
+			userBets.push(bet)
+		    }
+		    else {
+			nonUserBets.push(bet)
+		    }
+		}
+		else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.currAccount === bet.belongsTo || this.currAccount === bet.acceptedBy) {
+		    userAcceptedBets.push(bet)
+		}
+	    }
+	    //console.log("for loop")
+	}
+	//console.log("exiting for")
+	//console.log(userBets) 
+	this.setState({userAcceptedBets:userAcceptedBets, userBets:userBets, nonUserBets:nonUserBets}) 
+    }
+&nbsp;
+    convertBet(betArr) {
+	//console.log(betArr)
+	var amount = this.state.web3.fromWei(betArr[5].toNumber(), "ether")
+	var amount2 = this.state.web3.fromWei(betArr[4].toNumber(), "ether")
+	//console.log(amount, amount2)
+	var proposer = betArr[1]
+	var acceptor = betArr[2]
+	var accepted = betArr[3]
+	var deleted = betArr[11]
+	var bet = new Bet(betArr[0], amount, amount2, proposer, acceptor)
+	bet.deleted = deleted
+	bet.accepted = accepted
+	return bet
+    }
+&nbsp;
+    async removeBet(bet) {
+	await this.bettingContractInst.cancelBet(bet.id.toNumber(), {from:this.currAccount})
+    }
+&nbsp;
+    async takeBet(bet) {
+	//console.log(bet.id.toNumber(), this.currAccount, bet.accepterStake)
+	await this.bettingContractInst.acceptBet(bet.id.toNumber(),
+					   {from:this.currAccount,
+					    value:this.state.web3.toWei(bet.accepterStake, "ether")})
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    cl</span>aimBet(bet) {
+&nbsp;
+    }
+    
+    render() {
+	return (
+		&lt;div className="App"&gt;
+		&lt;nav className="navbar pure-menu pure-menu-horizontal"&gt;
+		&lt;a href="#" className="pure-menu-heading pure-menu-link"&gt;Betting App&lt;/a&gt;
+		&lt;/nav&gt;
+&nbsp;
+		&lt;main className="container"&gt;
+		&lt;div className="pure-g"&gt;
+		&lt;div className="pure-u-1-1"&gt;
+		
+		&lt;BetCreator createBet={this.addNewBet.bind(this)} newBet={this.newBet}/&gt;
+		&lt;BetList listHeader={"Your outstanding bets"} bets={this.state.userAcceptedBets} action={this.claimBet.bind(this)} actionTxt={"Claim Bet"}/&gt;
+&nbsp;
+		&lt;BetList listHeader={"Bets proposed by you"} bets={this.state.userBets} action={this.removeBet.bind(this)} actionTxt={"Cancel bet"}/&gt;
+&nbsp;
+		&lt;BetList listHeader={"Bets proposed by others"} bets={this.state.nonUserBets} action={this.takeBet.bind(this)} actionTxt={"Accept Bet"}/&gt;
+		&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;/main&gt;
+		&lt;/div&gt;
+	);
+    }
+}
+&nbsp;
+&nbsp;
+//export default App
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 27 2018 16:33:39 GMT+0000 (GMT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

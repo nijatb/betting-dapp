@@ -1,0 +1,28 @@
+truffle init : turns your folder into a truffle environment
+truffle migrate : compiles contracts
+truffle migrate --reset : resets the contract deployment
+
+truffle console
+Also have access to web3 in truffle console
+Can get address of specific contracts using nameOfContract.address
+web3.eth.accounts : gives list of all accounts (can also be seen in Ganache)
+
+you can then access instances of your smart contract: Greetings.deployed().then(function(instance){app=instance;})
+you can then access methods in your smart contract: app.getGreetings.call()
+
+Checking the state of a contract is free
+Change the state of a smart contract: app.setGreetings("Hello Matthew!",{from:web3.eth.accounts[0]})
+
+Exit truffle console: .exit
+
+Ethereum transaction always has four fields:
+1) from
+2) to
+3) value - how much ether should be transferred (can be 0)
+4) data or input - either detail about smart contract function, code or nothing if transfer or value
+
+
+To start a new development enviornment:
+1) Start Ganache
+2) run geth attach http://localhost:8545 in terminal
+3) make sure  you are in your smart contract folder, then run truffle migrate. This deploys the smart contract to your test node.

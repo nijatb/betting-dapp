@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/Betting.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> Betting.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>34/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.86% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>13/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.15;
+import "../installed_contracts/jsmnsol-lib/contracts/JsmnSolLib.sol";
+/* import "../installed_contracts/bytesutils.sol"; */
+/* import "../installed_contracts/tlsnutils.sol"; */
+&nbsp;
+contract Betting {
+&nbsp;
+  /***********************************/
+  /******* CONTRACT ATTRIBUTES *******/
+  /***********************************/
+&nbsp;
+  struct Bet {
+    uint betID;
+    address proposer;
+    address acceptor;
+    bool accepted;
+    uint acceptorAmount;
+    uint proposerAmount;
+    uint proposerHomeScore;
+    uint proposerAwayScore;
+    bool resolved;
+    int fixtureID;
+    uint totalAmount;
+    bool deleted;
+  }
+&nbsp;
+  address public master;
+  uint betCount;
+  uint[] betIDs;
+  mapping(uint =&gt; Bet) public bets;
+&nbsp;
+  /***********************************/
+  /************* MODIFIERS ***********/
+  /***********************************/
+&nbsp;
+&nbsp;
+  /***********************************/
+  /************** EVENTS *************/
+  /***********************************/
+&nbsp;
+  event BetChange(uint betID);
+&nbsp;
+  /***********************************/
+  /********* PUBLIC FUNCTIONS ********/
+  /***********************************/
+&nbsp;
+  /// @dev      Betting contract constructor sets initial bet count to 0
+  function Betting() public {
+    master = msg.sender;
+    betCount = 0;
+  }
+&nbsp;
+  /// @dev                    Allows a user to propose a bet
+  /// @param  _original_json  The json file passing through from the football API
+  /// @param  _acceptorAmount The odds put forward by the user
+  /// @param  _home_score     The home score proposed by the user
+  /// @param  _away_score     The away score proposed by the user
+  function proposeBet(string _original_json, uint _acceptorAmount, uint _home_score, uint _away_score) public payable {
+    if (msg.value &gt; 0) {
+      string memory json = _original_json;
+      uint returnValue;
+      JsmnSolLib.Token[] memory tokens;
+      uint actualNum;
+      (returnValue, tokens, actualNum) = JsmnSolLib.parse(json, 100);
+&nbsp;
+      /* Next check that the fixture being inputted has null scores (i.e. a fixture in the future) */
+      string memory score1 = JsmnSolLib.getBytes(json, tokens[24].start, tokens[24].end);
+      string memory score2 = JsmnSolLib.getBytes(json, tokens[26].start, tokens[26].end);
+      if (compareStrings(score1,'null') &amp;&amp; compareStrings(score2, 'null')) {
+        string memory jsonElement = JsmnSolLib.getBytes(json, tokens[4].start, tokens[4].end);
+	      int fixtureId = JsmnSolLib.parseInt(jsonElement);
+        uint betID = (betCount++)+1000;
+        betIDs.push(betID);
+        bets[betID] = Bet(betID, msg.sender, 0, false, _acceptorAmount, msg.value,_home_score,_away_score,false,fixtureId, (msg.value+_acceptorAmount), false);
+	      BetChange(betID);
+      }
+    }
+  }
+&nbsp;
+  /// @dev       Compares two strings
+  /// @param  a  The first string to be compared
+  /// @param  b  The second string to be compared
+  /// @return    Returns true if two strings are the same, false otherwise
+  function compareStrings (string a, string b) public returns (bool){
+       return keccak256(a) == keccak256(b);
+   }
+&nbsp;
+   /// @dev            Allows a user to accept a proposed bet
+   /// @param  _betID  The bet ID that the user is accepting
+   /// @return         The second string to be compared
+&nbsp;
+  function acceptBet(uint _betID) public payable {
+    require((msg.value == (bets[_betID].acceptorAmount)) &amp;&amp;
+      !bets[_betID].accepted &amp;&amp; (msg.sender != bets[_betID].proposer ));
+      bets[_betID].acceptor = msg.sender;
+      bets[_betID].accepted = true;
+      BetChange(_betID);
+  }
+&nbsp;
+  /// @dev                    Calculates the winner of a specific bet
+  /// @param  _betID          The bet ID that is being used
+  /// @param  _original_json  The json file with the fixture ID and results
+  function calculateWinner(uint _betID, string _original_json) public payable {
+    // First check that the json being passed in actually has scores for the match
+    string memory json = _original_json;
+    uint returnValue;
+    JsmnSolLib.Token[] memory tokens;
+    uint actualNum;
+    (returnValue, tokens, actualNum) = JsmnSolLib.parse(json, 100);
+    string memory score1 = JsmnSolLib.getBytes(json, tokens[24].start, tokens[24].end);
+    string memory score2 = JsmnSolLib.getBytes(json, tokens[26].start, tokens[26].end);
+&nbsp;
+    if (!compareStrings(score1,'null') &amp;&amp; !compareStrings(score2,'null')) {
+      int score1int = JsmnSolLib.parseInt(score1);
+      int score2int = JsmnSolLib.parseInt(score2);
+      bets[_betID].resolved = true;
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (bets[_betID].proposerHomeScore == uint(score1int) &amp;&amp; bets[_betID].proposerAwayScore == uint(score2int)) {
+        bets[_betID].proposer.transfer(bets[_betID].totalAmount);
+      }
+      else {
+        bets[_betID].acceptor.transfer(bets[_betID].totalAmount);
+      }
+    }
+  }
+&nbsp;
+ /**
+  * @dev            allows user to cancel a proposed bet, betID is deleted and
+  *                 bet funds transfered to the proposer
+  * @param _betID   The bet ID that is being canceled
+  */
+  function cancelBet(uint _betID) public payable {
+      require(bets[_betID].proposer == msg.sender);
+      require(bets[_betID].accepted == false);
+      bets[_betID].deleted = true;
+      BetChange(_betID);
+      bets[_betID].proposer.transfer(bets[_betID].proposerAmount);
+  }
+&nbsp;
+  /// @dev                    Returns details of a bet
+  /// @param  _betID          The bet ID that you are requesting
+  /// @return                 1. odds of the bet, 2. bet amount, 3. proposer home score,
+  ///                         4. proposer away score, 5. the fixture ID, 6. the proposer address
+  ///                         7. a boolean stating whether the bet has finished or not
+  function getBet(uint _betID) public constant returns (uint, uint, uint, uint, int, address, bool) {
+    return  ( bets[_betID].proposerAmount,
+              bets[_betID].acceptorAmount,
+              bets[_betID].proposerHomeScore,
+              bets[_betID].proposerAwayScore,
+              bets[_betID].fixtureID,
+              bets[_betID].proposer,
+              bets[_betID].resolved );
+  }
+&nbsp;
+  /// @dev                    Returns an array of all bet IDs
+  /// @return                 All bet IDs that have ever been created
+  function getBets() public constant returns (uint[]) {
+    return betIDs;
+  }
+&nbsp;
+  /// @dev                    Allows the requestor to see how many bets have been created
+  /// @return                 Returns an integer of the number of bets
+  function getNumberOfBets() public constant returns (uint) {
+   return betIDs.length;
+  }
+&nbsp;
+  /***********************************/
+  /******** PRIVATE FUNCTIONS ********/
+  /***********************************/
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Feb 22 2018 16:21:15 GMT+0000 (GMT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
